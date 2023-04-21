@@ -1,0 +1,163 @@
+@media only screen and (max-width: 767px) and (orientation: landscape) and (pointer:coarse) {
+  header { height: 40px; background-color: red!important;}
+  section {padding: 40px 0;}
+  #blaine { display: inline; }
+  #intro-top {
+    padding-top: 56px;
+    height: auto;overflow: visible;
+  }
+  #intro-top::before { display: none; }
+  #intro {min-height: 280px;}
+  body { background-color: #EFD6D5; }
+
+}
+
+@media only screen and (min-width: 960px) {
+    #intro figure {padding-right: 348px; }
+    #intro .bottom-bend { right: 348px; transform:translateY(45px); }
+    #intro-top::after, #intro::after {
+    width: 350px;
+  }
+  #intro-top .row::after { /* Squiggle */
+  right: 296px;}
+  #intro h1 {padding-left: 48px; }
+  .one-third.column { width: 49% }
+  .two-thirds.column { width: 49%; }
+    .row.with-columns {
+    display: flex;
+    justify-content: space-between;
+  }
+  .half.column { width: 44%; }
+  .row.with-columns {flex-direction: row; }  
+}
+
+@media only screen and (min-width: 767px) {
+
+  body { font-size: 24px; }
+   section {
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0px;
+  }
+  h1 { font-size: 130px; padding-top: 0; text-align: left;}
+/*  h1 { font-size: 130px; padding-top: 0; text-align: left;}*/
+  #getting-married {  bottom: 100px;}
+  h2 {
+  font-size: 90px;
+  line-height: 122%;
+  }
+  .hero {font-size: 120px; }
+
+  h3 { font-size: 60px; padding: 16px 0 32px; }
+  th, .label { font-size: 16px; }
+  .row { max-width: 1040px; padding: 0 80px;}
+  .row.wide { max-width: 1276px;}
+  .row.medium { max-width: 768px; }
+  a.header-link { font-size: 44px; }
+  p.big { font-size: 44px; }
+
+
+  .centered { align-items: center; justify-content:center!important; }
+
+
+  
+  nav {justify-content: center;}
+  nav a { margin-right: 62px; }
+  nav a:last-child { margin-right:0px; }
+
+  #hotels .column:first-child::after { display: none; }
+  #intro .row {
+/*    display: inline-block;
+    width: auto;*/
+    padding-top: 0;
+    align-items: flex-start;
+  }
+  #our-story .column {
+    padding: 0!important;
+  }
+  #our-story .column:first-child {
+    margin-right: 120px;
+  }
+  .column.image-offset {
+    max-height: none;
+    padding-top: none;
+  }
+  th { padding-top: 9px; }
+  
+  #intro-top {height: 30vh; min-height: 248px;}
+  #intro-top::before {
+    width: 157px;
+    height: 65%;
+  }
+  #intro-top::after {
+    height: 100%;
+    background-image: url(assets/intro-top-right-big.svg);
+    background-position: bottom left;
+    background-size:cover;
+    z-index: 105;
+  }
+  #intro::after {
+    background-image: url(assets/intro-right-big.svg);
+  }
+  
+
+  #intro-top .row::after { /* Squiggle */
+    width: 395px;
+  height: 143px;
+  right: 0px;
+  background-image: url(assets/intro-top-squiggle-big.svg);
+  background-repeat: no-repeat;
+  top: 33px;
+  background-size: contain;
+  transform: rotate(9deg);
+  }
+  #getting-married {
+      bottom: 180px;
+  }
+/*  #getting-married {position: absolute; }*/
+  #intro {padding: 48px 0; justify-content: flex-start; }
+/*  #getting-married {
+    bottom: 180px;
+    left: auto;
+    right: 50%;
+    transform-origin: top left;
+    transform: rotate(-24deg);
+  }*/
+  #intro h1 { padding-top: 28px; }
+
+
+
+
+  aside .big { display: block; }
+
+  #intro aside .left { left: -60px; top: 40%; }
+  #intro aside .top { top: -40px; right: 200px; }
+  #intro aside .top-left { top: -2px; width: 487px; }
+  #intro aside .right { width: 216px; }
+  #intro aside .bottom-left { width: 303px; }
+
+
+  #intro { height: 70vh; min-height: 560px; max-height: 640px;}
+  #intro-ring {
+    width: 626px;
+    bottom: -300px;
+    ransform: translateX(320px);
+  }
+  #our-story .row {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  #the-big-day h2 {
+    letter-spacing: -2px;
+    text-indent: -22px;
+  }
+/*  #our-story aside .top-right {width: 248px;}
+  #the-big-day aside .top-right { width: 92px; top: -63px; }
+  #hotels .top-left { width: 120px; }
+  #image-section .top-left { width: 118px; top: -74px; }
+  #gifts .top-right { width: 151px; }*/
+}
+

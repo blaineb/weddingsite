@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 viewBox="0 0 1363 620" preserveAspectRatio="none">
+	 <style>@import url(../svg-styles.css);</style>
+<style type="text/css">
+	@font-face { font-family: 'Aeonik'; font-style: normal; font-weight: normal; src: local('Aeonik-Regular'), url('Aeonik-Regular.ttf') format('truetype'); }
+
+	.st0{fill:#414812;}
+	.st1{fill:none;}
+	.st2{fill:#F1E171;}
+	#big-text{
+		font-family: "Aeonik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 3px;
+    fill: #9C958F;
+	}
+</style>
+<polygon class="st0" points="1363,266 1363,570.5 0,570.5 0,299.9 317.9,484.5 1033.4,484.5 "/>
+<path  class="st1" d="M1363,0v367.9c-36.2,38.1-80.1,81.9-128,121.6c-41.5,34.3-81.1,61.3-118.6,81c-30.4,15.9-59.4,27-86.8,33.1
+	c-26.9,6-53.5,11.5-79.7,16.4h-641c-5.6-1.4-10.7-2.8-15.2-4c-9-2.4-19.2-5.1-22.7-5.6c-25.9-0.7-78-26.1-104.6-40
+	c-6.4-3.3-11.3-6-14-7.5C112.4,541.1,55.9,506,0,457.5V93.6l28.6,37.2C95,217.5,171.1,286.1,254.6,334.9
+	c102.7,60,218,90.4,342.6,90.4c191.5,0,343.5-37.5,464.6-114.6c107.3-68.4,192.9-170.1,261.2-310.8H1363z"/>
+<path class="st2" d="M1363,0v315.2c-75.3,81.5-213.5,224.8-341.3,253.2c-3,0.7-6.1,1.4-9.1,2c-410.4,89.9-630.1,31.8-709.8,10.7
+	c-15.3-4-25.5-6.7-30.8-6.7c-3.3,0-9.2-1.3-17.3-4C208.9,555.5,94.7,498.9,0,408.8V152.8C120.7,310,310.9,461.4,597.3,461.4
+	C1004.6,461.4,1225.2,294.6,1363,0z"/>
+<!-- <path id="text-path" class="st1" d="M1363,0v570.4h-246.7c-30.4,15.9-59.4,27-86.8,33.1c-26.9,6-53.5,11.5-79.7,16.4h-641c-5.6-1.4-10.7-2.8-15.2-4
+	c-9-2.4-19.2-5.1-22.7-5.6c-25.9-0.7-78-26.1-104.6-40H0V93.6l28.6,37.2C95,217.5,171.1,286.1,254.6,334.9
+	c102.7,60,218,90.4,342.6,90.4c191.5,0,343.5-37.5,464.6-114.6c107.3-68.4,192.9-170.1,261.2-310.8H1363z"/>
+	<text>
+    <textPath id="big-text" xlink:href="#text-path" startOffset="80%">
+      We're getting married!
+    </textPath>
+  </text> -->
+</svg>

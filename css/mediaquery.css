@@ -1,0 +1,252 @@
+ /* Move to bigger image */
+ /* Connected to media query in HTML */
+
+/*@media only screen and (min-width: 414px) and (max-width: 959px){  
+  #getting-married { 
+    transform: translateX(-34px) rotate(-4deg) translateY(10px); 
+    transform-origin: top right;
+  }
+}*/
+@media only screen and (min-width: 767px)  { 
+  #bottom-bend, #big-bend {   transform:translateY(45px);}
+  #bottom-bend img, #big-bend svg {height: 570px;}
+  #intro { min-height: 570px; }
+}
+
+/* Bigger H1 type */
+@media only screen and (min-width: 767px) {
+  h1 { font-size: 130px; padding-top: 0; text-align: left;}
+}
+/* Bigger Typography generally */
+@media only screen and (min-width: 767px) {
+  #getting-married {  transform: translateY(24px) rotate(-12deg); }
+  body { font-size: 22px; }
+  #intro h1 {padding-left: 48px; }
+  h2 { font-size: 90px; line-height: 122%; }
+  h3 { font-size: 60px; padding: 16px 0 32px; }
+  th, .label { font-size: 16px; padding-top: 8px; }
+  .hero {font-size: 120px; }
+  a.header-link { font-size: 44px; }
+  p.big { font-size: 42px; }
+  p.medium { font-size: 32px; }
+
+  /* Layout & spacing */
+  nav {justify-content: center;}
+  nav a { margin-right: 62px; }
+  nav a:last-child { margin-right:0px; }
+
+  section { align-items: center; justify-content: center; padding: 120px 0px; position: relative; }
+  .row { max-width: 1040px; padding: 0 80px; }
+  .row.narrow { max-width: 720px; }
+
+  #intro {padding: 48px 0; justify-content: flex-start; }
+  #rsvp-form form { padding-top: 48px; }
+  .with-columns .column:first-child { margin-right: 120px; }
+
+  /* Pseudo element overrides */
+  #our-story::before {
+    width: 279px;
+    height: 232px;
+    transform: rotate(-10deg);
+    left: -24px;
+  }
+
+  #our-story { padding: 0; }
+  #our-story .column:first-child { padding-top: 120px; }
+  #our-story .row.with-columns { display: flex; flex-direction: row; }
+  #our-story .half.column { width: 49%; }
+  #our-story .two-thirds.column { width: 60%; }
+  #our-story p.big { font-size: 40px; }
+  #our-story .row { align-items:center; }
+  .row.overflow .column { flex-shrink: 0; }
+  .our-story-image { border-radius: 0; }
+  .radio-buttons { flex-direction: row; justify-content: space-between; }
+  .radio-buttons label {
+    width: 48%;
+    justify-content:space-between;
+    margin-bottom: 0;
+  }
+
+  form p {font-size: 18px;}
+}
+
+/* Thicker Right-side Intro Shapes */
+ @media only screen and (min-width: 960px) {
+
+  section { padding: 200px 0; }
+  #intro .row { padding-right: 348px; }
+  #intro figure { height: 280px; }
+  #bottom-bend, #big-bend { right: 348px; }
+  #big-bend {display: block; max-width: 100%;}
+  #intro-top {max-height: none;}
+  #intro-top::after, #intro::after { width: 350px; }
+  #intro-top::after {
+    height: 100%;
+    background-image: url(/../assets/intro-top-right-big.svg);
+    background-position: bottom left;
+    background-size:cover;
+    z-index: 105; }
+  #intro::after { background-image: url(/../assets/intro-right-big.svg);}
+  #intro-top .row::after { /* Squiggle */
+  width: 395px;
+  height: 143px;
+  right: 248px;
+  background-image: url(/../assets/intro-top-squiggle-big.svg);
+  background-repeat: no-repeat;
+  top: 33px;
+  background-size: contain;
+  transform: rotate(9deg);
+  }
+
+    /* Two column layout */
+  .row.with-columns { display: flex; flex-direction: row; }
+  .half.column { width: 49%; }
+  .two-thirds.column { width: 60%; }
+  #our-story .row { display: flex; align-items: center; }
+  .with-columns .column { padding: 0!important; }
+  .with-columns .column:first-child { margin-right: 120px; }
+  #hotels .column:first-child::after {display: none;}
+
+
+  .row.overflow .column { flex-shrink: 0; }
+
+  #intro-top::before {
+    width: 352px;
+    height: 324px;
+    background-image: url(/../assets/intro-top-red-big.svg);
+    top: 0;
+    left: 0;
+  }
+  #our-story h2 { mix-blend-mode: difference; }
+  #the-big-day::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 375px;
+    width: 146px;
+    top: -122px;
+    right: 0;
+    background-image: url(/../assets/the-big-day-top-right-big.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  #image-section::before {
+    background-image: url('/../assets/image-section-bottom.svg');
+    left: auto;
+    right: 0;
+    width: 318px;
+
+  }
+  #hotels::before {
+    right: auto;
+    left: 0;
+    top: -114px;
+    transform: scaleX(-1);
+    width: 146px;
+    height: 440px;
+  }
+  #rsvp-form::before { /* Right side */
+    transform: scaleX(-1);
+    left: auto;
+    width: 167px;
+    height: 446px;
+    right: -24px;
+    background-size: cover;
+    top: 150px;
+  }
+  #the-big-day:before {
+    width: 250px;
+    height: 430px;
+    background-size: contain;
+  }
+  #intro-top { max-height: 420px; }
+  #rsvp-form::after { /* Big circle */
+    content: '';
+    display: block;
+    position: absolute;
+    height: 626px;
+    width: 258px;
+    top: -114px;
+    left: 0;
+    background-image: url(/../assets/rsvp-top-left-big.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  #gifts::before {
+    width: 248px;
+    height: 326px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  #intro { height: 70vh; min-height: 560px; max-height: 640px;}
+  header { height: 102px; }
+  nav a { font-size: 28px; }
+  #gifts .row {align-items: flex-start; text-align: left;}
+
+
+}
+/*@media only screen and (min-width: 1440px) {
+  #our-story {padding: 120px 0;}
+  .our-story-image {
+    border-radius: 1000px;
+  }
+}*/
+/* Overrides for extra small screens) */
+@media only screen and (max-width: 374px) {
+  #intro-top .row::after { right: 0px; }
+  #intro-top::before {left: -24px; }
+  
+  /* Move the intro colored blocks offscreen on small devices. */
+  #intro::after, #intro-top::after { transform: translateX(50px); }
+  #intro .bottom-bend { right: 52px; }
+  #bottom-bend { right: 48px; }
+  #the-big-day h2 { font-size: 50px; text-indent: -12px; text-align: center; display: flex; justify-content: center;}
+  #intro .row { padding-right: 52px; }
+}
+
+@media only screen and (max-width: 600px) {
+  #intro {max-height: 580px;}
+  }
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  header { height: 40px; background-color: red!important;}
+  section {padding: 40px 0;}
+  #blaine { display: inline; }
+  #intro-top {
+    padding-top: 56px;
+    height: auto;overflow: visible;
+  }
+  #intro-top::before { display: none; }
+  #intro-top .row::after{ top: 20px; } /* Squiggle */
+  #intro {min-height: 280px;}
+  body { background-color: #EFD6D5; }
+}
+
+/*
+@media only screen and (min-width: 1400px) {
+  #getting-married {
+    right: 600px;
+    transform: rotate(-24deg);
+  }
+}
+
+
+@media only screen and (min-width: 2200px) {
+  #getting-married {
+    position: relative;
+    width: 100%;
+    right: auto;
+    transform: none;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1240px) {
+  #getting-married { 
+    transform: translateX(3px) rotate(-12deg) translateY(-206px);
+  }
+}*/
+
+
+
+
+

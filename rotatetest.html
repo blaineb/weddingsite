@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform Elements</title>
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		const box = document.getElementById('box');
+		window.addEventListener('resize', () => {
+			const vw = window.innerWidth;
+			if (vw > 960) {
+				box.style.transform = `translateX(${vw/10}px) rotate(${vw/10}deg)`;
+			} else {
+				box.style.transform = `translateY(${vw/20}px) rotate(${vw/5}deg)`;
+			}
+		});
+	</script>
+</body>
+</html>

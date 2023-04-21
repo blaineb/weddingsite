@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <meta http-equiv="refresh" content="5"> -->
+		<title>Natra & Blaine • Aug 5 2023</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/css/MyFontsWebfontsKit.css"> -->
+		<link rel="stylesheet" href="/css/minireset.css">
+		<link rel="stylesheet" href="/css/styles.css">
+		<link rel="stylesheet" href="/css/mediaquery.css">
+		<script src="/js/circletype.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>	
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script> -->
+		<script src="/js/splittype.js"></script>
+<!-- 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>  -->
+
+		
+	</head>
+	<body>
+		<header id="nav">
+			<nav class="row">
+				<a href="#the-big-day" class="hoverable">Event</a>
+				<a href="#hotels" class="hoverable">Hotels</a>
+				<a href="#rsvp-form" class="hoverable">RSVP</a>
+				<a href="#gifts" class="hoverable">Gifts</a>
+			</nav>
+		</header>
+		<div id="debug">
+			<p> Width <span id="width"></span></p>
+			<p> Height <span id="height"></span></p>
+			<p> Rotation <span id="rotate"></span></p>
+			<p> Translate X<span id="x"></span></p>
+			<p> Radius <span id="radius"></span></p>
+		</div>
+
+		<section id="intro-top">
+			<div class="row">
+				<span class="eyebrow label">On August 5th...</span>
+			</div>
+		</section>
+		<section id="intro">
+			<div class="row">
+				<h1>
+					<span id="natra" class="name">Natra</span> 
+					<span id="amp" class="ampersand">&amp;</span> 
+					<span id="blaine" class="name">Blaine</span>
+				</h1>
+				<span class="eyebrow label" id="getting-married">...Are getting married!</span>
+				
+			</div><!-- /row -->
+			<figure>
+				
+				<picture id="bottom-bend">
+    				<source media="(min-width: 768px)" srcset="/assets/test-image-path-2.svg">
+    				<img src="/assets/yellow-band-small.svg"/>
+ 				</picture>
+			</figure>
+		</section>
+		<section id="our-story">
+			<div class="row with-columns overflow">
+				<div class="two-thirds column fadeIn">
+					<p class="big">On August 5th 2023 we’re tying the knot in Downtown Los Angeles and want you to be there to celebrate with us.</p>
+					<a id="rsvp-button" class="button" href="#rsvp-form">RSVP</a>
+				</div>
+				<div class="half column">
+					<img class="our-story-image" src="assets/couple-bubble.jpg" />
+				</div>
+			</div>
+		</section>
+		
+		<section id="the-big-day">
+			<div class="row narrow">
+				<h2 class="fadeIn">The Big Day</h2>
+				<table>
+					<tr class="fadeIn">
+						<th>Date</th>
+						<td>Saturday August 5, 2023</td>
+					</tr>
+					<tr class="fadeIn">
+						<th>Time</th>
+						<td>4pm-11pm</td>
+					</tr>
+					<tr class="fadeIn">
+						<th>Venue</th>
+						<td>
+							Grass Room<br>
+							<a href="https://www.google.com/maps?q=3927+Van+Buren+Pl+Culver+City+CA+90232" target="_blank">3927 Van Buren Pl<br>Culver City, CA 90232</a></td>
+					</tr>
+					<tr class="fadeIn">
+						<th>Attire</th>
+						<td>Cocktail</td>
+					</tr>
+					<tr class="fadeIn">
+						<th>Parking</th>
+						<td>Valet</td>
+					</tr>
+				</table>
+			</div><!-- /row --> 
+		</section>
+		<section id="image-section">
+		</section>
+		<section id="hotels">
+			<div class="row">
+				<h2 class="fadeIn">Hotels</h2>
+			</div>
+			<div class="row with-columns">
+				<div class="half column">
+					<span class="badge label fadeIn">Preferred</span>
+					<h3 class="fadeIn"><a href="#" class="header-link">The Omni</a></h3>
+					<p class="fadeIn">Just a 6 minute drive to the venue, the Omni is super cozy and beautiful. And yes there’s a pool :)</p>
+					<table>
+						<tr class="fadeIn">
+							<th>Rate</th>
+							<td>$209/night</td>
+						</tr>
+						<tr class="fadeIn">
+							<th>Dates</th>
+							<td>Thursday 8/3 to Monday 8/7</td>
+						</tr>
+						<tr class="fadeIn">
+							<th>Book</th>
+							<td>Use <a href="#">this link</a></td>
+						</tr>
+					</table>
+				</div><!-- /column -->
+				<div class="half column">
+					<h3 class="fadeIn"><a href="#" class="header-link">Conrad</a></h3>
+					<p class="fadeIn">This luxe hotel is an 8 minute drive to the wedding venue. We don’t have a block here, but if we receive a critical mass of 10 folks that want to book, we’ll get one. Let us know <b>by May 1st</b> if you think you want to stay here.</p>
+					<table>
+						<tr class="fadeIn">
+							<th>Rate</th>
+							<td>$299/night (with a block)</td>
+						</tr>
+					</table>
+				</div><!-- /column -->
+			</div><!-- /row -->
+		</section>
+		
+		<section id="rsvp-form">
+			<div class="row narrow">
+
+				<h2 class="hero centered fadeIn">Rsvp</h2>
+				<p id="pre-form-message" class="medium centered">We can't wait to celebrate with you!</p>
+				<form id="rsvp-form-group" method="POST" action="https://script.google.com/macros/s/AKfycbw-dnFOLjGPcC1GeSmGqvVpuSLPtq4V46gS9ZhcP6asbhh879RtInDXxZPjkhAWHL2O/exec">
+					<div>
+						<label class="label" for="name">What's your name?</label>
+						<input name="Name" id="rsvp-input-name" type="text" placeholder="Full name">
+						<p id="error-message" class="hidden"></p>
+					</div>
+					<div>
+					 <label class="label" for="name">Your response</label>
+					 <div class="radio-buttons">
+						<label>
+							<input id="rsvp-input-accepts" type="radio" name="Response" value="accepts" checked hidden>
+							<span class="radio-button-label">Accept</span>
+						</label>
+						<label>
+							<input id="rsvp-input-declines" type="radio" name="Response" value="declines" hidden>
+							<span class="radio-button-label">Decline</span>
+						</label>
+					</div>
+					</div>
+					<div id="other-guests-input-group">
+						<label  class="label" for="guests">Names of anyone who will be joining you</label>
+						<input name="Guests" id="rsvp-input-other-guests" type="text" placeholder="Leave blank if attending alone">
+						<p>Due to venue restrictions, <span class="emphasis">children under 10 years old</span> won’t be able to attend outside of immediate family. Reach out to us if you need babysitting support.</p>
+					</div>
+					<div class="button-group">
+						<button class="hoverable" id="rsvp-submit">Submit</button>
+					</div>
+				</form>
+				<div id="rsvp-response-section" class="hidden">
+					<p class="big centered" id="rsvp-response"></p>
+				</div>
+
+			</div><!-- /row -->
+		</section>
+		<section id="gifts">
+			<div class="row">
+				<h2 class="fadeIn">Gifts</h2>
+				<p class="big fadeIn">We have most things we need in life and love, but if you want to contribute, you can do so <a href="#">here</a>.</p>
+				<a href="#" class="header-link fadeIn">Registry</a>
+			</div>
+		</section>
+		<section id="footer">
+			<span id="footer-text" class="label">Natra and Blaine • 2023</span>
+			<picture id="footer-bend">
+    			<img src="/assets/footer.svg"/>
+ 				</picture>
+		</section>
+<!-- 		<div class="cursor">
+  <div class="cursor__ball cursor__ball--big ">
+    <svg height="50" width="50">
+      <circle cx="25" cy="25" r="15" stroke-width="0"></circle>
+    </svg>
+  </div>
+  
+  <div class="cursor__ball cursor__ball--small">
+    <svg height="20" width="20">
+      <circle cx="10" cy="10" r="4" stroke-width="0"></circle>
+    </svg>
+  </div>
+</div> -->
+		<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+	</body>
+	<script src="/js/app2.js"></script>
+</html>
