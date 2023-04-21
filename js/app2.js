@@ -2,44 +2,44 @@ gsap.registerPlugin(ScrollTrigger); /* register the ScrollTrigger plugin */
 
 // var element = document.querySelector(".fadeIn"); /* get the element */
 
-gsap.utils.toArray('section').forEach(section => {
-  const elems = section.querySelectorAll('.fadeIn');
-  // Set starting params for sections
-  gsap.set(elems, {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    ease: 'power3.out',
-    overwrite: 'auto',
-  });
+// gsap.utils.toArray('section').forEach(section => {
+//   const elems = section.querySelectorAll('.fadeIn');
+//   // Set starting params for sections
+//   gsap.set(elems, {
+//     y: 50,
+//     opacity: 0,
+//     duration: 1,
+//     ease: 'power3.out',
+//     overwrite: 'auto',
+//   });
   
-  ScrollTrigger.create({
-    trigger: section,
-    start: 'top 60%',
-    end: 'top top',
-    markers: true,
-    onEnter: () => gsap.to(elems, {
-      y: 0,
-      opacity: 1,
-      stagger: 0.2,
-    }),
-    onLeave: () => gsap.to(elems, {
-      y: -30,
-      opacity: 0,
-      stagger: 0.2,
-    }),
-    onEnterBack: () => gsap.to(elems, {
-      y: 0,
-      opacity: 1,
-      stagger: -0.2,
-    }),
-    onLeaveBack: () => gsap.to(elems, {
-      y: 30,
-      opacity: 0,
-      stagger: -0.2,
-    }),
-  });
-})
+//   ScrollTrigger.create({
+//     trigger: section,
+//     start: 'top 60%',
+//     end: 'top top',
+//     markers: true,
+//     onEnter: () => gsap.to(elems, {
+//       y: 0,
+//       opacity: 1,
+//       stagger: 0.2,
+//     }),
+//     onLeave: () => gsap.to(elems, {
+//       y: -30,
+//       opacity: 0,
+//       stagger: 0.2,
+//     }),
+//     onEnterBack: () => gsap.to(elems, {
+//       y: 0,
+//       opacity: 1,
+//       stagger: -0.2,
+//     }),
+//     onLeaveBack: () => gsap.to(elems, {
+//       y: 30,
+//       opacity: 0,
+//       stagger: -0.2,
+//     }),
+//   });
+// })
 
 // gsap.utils.toArray(".fadeIn").forEach(function(element) { /* loop through all elements with class "fadeIn" */
 //   gsap.to(element, {
