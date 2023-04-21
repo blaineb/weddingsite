@@ -66,6 +66,7 @@
 /* Thicker Right-side Intro Shapes */
  @media only screen and (min-width: 960px) {
   .with-columns .column:first-child { margin-right: 120px; }
+  #footer-text { padding-bottom: 80px; }
 
   #our-story .column:first-child { padding-top: 120px; }
   #our-story .row.with-columns { display: flex; flex-direction: row; }
