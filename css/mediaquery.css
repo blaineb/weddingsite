@@ -41,7 +41,6 @@
 
   #intro {padding: 48px 0; justify-content: flex-start; }
   #rsvp-form form { padding-top: 48px; }
-  .with-columns .column:first-child { margin-right: 120px; }
 
   /* Pseudo element overrides */
   #our-story::before {
@@ -50,16 +49,10 @@
     transform: rotate(-10deg);
     left: -24px;
   }
+  #our-story .row {align-items: center; display: flex; }
+  #our-story-image-column { max-width: 480px; }
 
-  #our-story { padding: 0; }
-  #our-story .column:first-child { padding-top: 120px; }
-  #our-story .row.with-columns { display: flex; flex-direction: row; }
-  #our-story .half.column { width: 49%; }
-  #our-story .two-thirds.column { width: 60%; }
-  #our-story p.big { font-size: 40px; }
-  #our-story .row { align-items:center; }
-  .row.overflow .column { flex-shrink: 0; }
-  .our-story-image { border-radius: 0; }
+  
   .radio-buttons { flex-direction: row; justify-content: space-between; }
   .radio-buttons label {
     width: 48%;
@@ -72,7 +65,26 @@
 
 /* Thicker Right-side Intro Shapes */
  @media only screen and (min-width: 960px) {
+  .with-columns .column:first-child { margin-right: 120px; }
 
+  #our-story .column:first-child { padding-top: 120px; }
+  #our-story .row.with-columns { display: flex; flex-direction: row; }
+  #our-story .half.column { 
+    width: 351px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: -1px;
+  }
+  #our-story .two-thirds.column { width: 60%; }
+  #our-story p.big { font-size: 40px; }
+  #our-story .row { align-items:center; }
+  .row.overflow .column { flex-shrink: 0; }
+  .our-story-image { border-radius: 0; }
+
+  #hotels .half.column:last-child {
+    padding-top: 27px!important;
+  }
   section { padding: 200px 0; }
   #intro .row { padding-right: 348px; }
   #intro figure { height: 280px; }
@@ -210,7 +222,7 @@
   }
 
 @media only screen and (max-width: 767px) and (orientation: landscape) {
-  header { height: 40px; background-color: red!important;}
+  header { height: 40px; }
   section {padding: 40px 0;}
   #blaine { display: inline; }
   #intro-top {
@@ -223,15 +235,16 @@
   body { background-color: #EFD6D5; }
 }
 
-/*
-@media only screen and (min-width: 1400px) {
-  #getting-married {
-    right: 600px;
-    transform: rotate(-24deg);
+
+@media only screen and (min-width: 1240px) {
+  #our-story .half.column {
+    position: relative;
+    width: auto;
   }
+  .our-story-image { border-radius:1000px; }
 }
 
-
+/*
 @media only screen and (min-width: 2200px) {
   #getting-married {
     position: relative;

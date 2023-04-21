@@ -293,7 +293,7 @@ aside .big { display: none; }
 .row.with-columns { flex-direction: column; }
 
 /*#footer { padding: 24px 40px 96px; }*/
-#our-story .half.column { align-self: stretch; }
+/*#our-story .half.column { align-self: stretch; }*/
 .our-story-image {
   width: 100%;
 /*  mask-image: url(assets/image-mask.svg);
