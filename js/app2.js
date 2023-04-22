@@ -1,5 +1,47 @@
 gsap.registerPlugin(ScrollTrigger); /* register the ScrollTrigger plugin */
-
+const animatables = gsap.utils.toArray(".fadeIn");
+animatables.forEach(function(element) {
+  gsap.set(element, {
+    y: 60,
+    opacity: 0,
+    ease: 'power2.in',
+    overwrite: 'auto',
+  });
+  ScrollTrigger.create({
+    trigger: element,
+    start: 'top 90%',
+    end: 'top top',
+    markers: false,
+    onEnter: function() {
+      gsap.to(element, {
+        y: 0,
+        opacity: 1,
+        duration: 0.4, // set duration for the animation
+      });
+    },
+    // onLeave: function() {
+    //   gsap.to(element, {
+    //     y: -60,
+    //     opacity: 0,
+    //     duration: 0.4, // set duration for the animation
+    //   });
+    // },
+    // onEnterBack: function() {
+    //   gsap.to(element, {
+    //     y: 0,
+    //     opacity: 1,
+    //     duration: 0.4, // set duration for the animation
+    //   });
+    // },
+    // onLeaveBack: function() {
+    //   gsap.to(element, {
+    //     y: -60,
+    //     opacity: 1,
+    //     duration: 0.4, // set duration for the animation
+    //   });
+    // },
+  });
+});
 // var element = document.querySelector(".fadeIn"); /* get the element */
 
 // gsap.utils.toArray('section').forEach(section => {

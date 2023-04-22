@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="/css/minireset.css">
 		<link rel="stylesheet" href="/css/styles.css">
 		<link rel="stylesheet" href="/css/mediaquery.css">
+		<link rel="stylesheet" href="/css/animations.css">
 		<script src="/js/circletype.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
@@ -67,9 +68,9 @@
 		</section>
 		<section id="our-story">
 			<div class="row with-columns overflow">
-				<div class="two-thirds column fadeIn">
-					<p class="big">On August 5th 2023 we’re tying the knot in Downtown Los Angeles and want you to be there to celebrate with us.</p>
-					<a id="rsvp-button" class="button" href="#rsvp-form">RSVP</a>
+				<div class="two-thirds column">
+					<p class="big fadeIn">On August 5th 2023 we’re tying the knot in Downtown Los Angeles and want you to be there to celebrate with us.</p>
+					<a id="rsvp-button" class="button fadeIn" href="#rsvp-form">RSVP</a>
 				</div>
 				<div id="our-story-image-column" class="half column">
 					<img class="our-story-image" src="assets/couple-bubble.jpg" />
@@ -149,8 +150,8 @@
 			<div class="row narrow">
 
 				<h2 class="hero centered fadeIn">Rsvp</h2>
-				<p id="pre-form-message" class="medium centered">We can't wait to celebrate with you!</p>
-				<form id="rsvp-form-group" method="POST" action="https://script.google.com/macros/s/AKfycbw-dnFOLjGPcC1GeSmGqvVpuSLPtq4V46gS9ZhcP6asbhh879RtInDXxZPjkhAWHL2O/exec">
+				<p id="pre-form-message" class="medium centered fadeIn">We can't wait to celebrate with you!</p>
+				<form id="rsvp-form-group" method="POST" action="https://script.google.com/macros/s/AKfycbw-dnFOLjGPcC1GeSmGqvVpuSLPtq4V46gS9ZhcP6asbhh879RtInDXxZPjkhAWHL2O/exec" class="fadeIn">
 					<div>
 						<label class="label" for="name">What's your name?</label>
 						<input name="Name" id="rsvp-input-name" type="text" placeholder="Full name">
