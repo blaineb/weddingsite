@@ -128,7 +128,7 @@
     height: 324px;
     background-image: url(/../assets/intro-top-red-big.svg);
     top: 0;
-    left: 0;
+    left: -32px;
   }
   #our-story h2 { mix-blend-mode: difference; }
   #the-big-day::after {
@@ -148,6 +148,7 @@
     left: auto;
     right: 0;
     width: 318px;
+    height: 275px;
 
   }
   #hotels::before {
