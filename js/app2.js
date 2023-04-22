@@ -19,27 +19,6 @@ animatables.forEach(function(element) {
         duration: 0.4, // set duration for the animation
       });
     },
-    // onLeave: function() {
-    //   gsap.to(element, {
-    //     y: -60,
-    //     opacity: 0,
-    //     duration: 0.4, // set duration for the animation
-    //   });
-    // },
-    // onEnterBack: function() {
-    //   gsap.to(element, {
-    //     y: 0,
-    //     opacity: 1,
-    //     duration: 0.4, // set duration for the animation
-    //   });
-    // },
-    // onLeaveBack: function() {
-    //   gsap.to(element, {
-    //     y: -60,
-    //     opacity: 1,
-    //     duration: 0.4, // set duration for the animation
-    //   });
-    // },
   });
 });
 // var element = document.querySelector(".fadeIn"); /* get the element */
