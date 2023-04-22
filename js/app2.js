@@ -1,7 +1,7 @@
-// const header = document.getElementById('nav');
-// window.addEventListener('load', function() {
-//   header.classList.remove('preload');
-// });
+const header = document.getElementById('nav');
+window.addEventListener('load', function() {
+  header.classList.remove('preload');
+});
 
 // gsap.registerPlugin(ScrollTrigger); /* register the ScrollTrigger plugin */
 // const animatables = gsap.utils.toArray(".fadeIn");
