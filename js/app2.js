@@ -1,3 +1,8 @@
+const header = document.getElementById('nav');
+window.addEventListener('load', function() {
+  header.classList.remove('preload');
+});
+
 gsap.registerPlugin(ScrollTrigger); /* register the ScrollTrigger plugin */
 const animatables = gsap.utils.toArray(".fadeIn");
 animatables.forEach(function(element) {
@@ -21,6 +26,34 @@ animatables.forEach(function(element) {
     },
   });
 });
+
+// Get all the sections on the page
+const sections = document.querySelectorAll('section');
+
+// Check if a section is in the viewport
+function isInViewport(section) {
+  const rect = section.getBoundingClientRect();
+  return (
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) / 2 &&
+    rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) / 2
+  );
+}
+
+// Add the "animate" class to any section that is in the viewport
+function animateSections() {
+  sections.forEach((section) => {
+    if (isInViewport(section)) {
+      section.classList.add('animate');
+    } else {
+      section.classList.remove('animate');
+    }
+  });
+}
+
+// Call the animateSections function whenever the window is scrolled or resized
+window.addEventListener('scroll', animateSections);
+window.addEventListener('resize', animateSections);
+
 // var element = document.querySelector(".fadeIn"); /* get the element */
 
 // gsap.utils.toArray('section').forEach(section => {
@@ -296,3 +329,30 @@ form.addEventListener("submit", function(event) {
 //     scale: 1 });
 
 // }
+
+
+// Check if a section is in the viewport
+function isInViewport(section) {
+  console.log("HI!");
+  const rect = section.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+// Add the "animate" class to any section that is in the viewport
+function animateSections() {
+  console.log("Hah!");
+  sections.forEach((section) => {
+    if (isInViewport(section)) {
+      section.classList.add('animate');
+    } else {
+      section.classList.remove('animate');
+    }
+  });
+}
+
+// Call the animateSections function whenever the window is scrolled or resized
+window.addEventListener('scroll', animateSections);
+window.addEventListener('resize', animateSections);

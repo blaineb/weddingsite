@@ -1,0 +1,11 @@
+header {
+	transition: all .3s ease-in-out;
+}
+header.preload {
+	transform: translateY(-100%);
+}
+
+#the-big-day.animate::before {
+	transform: rotate(8deg);
+	transition: transform .3 ease-in-out;
+}
