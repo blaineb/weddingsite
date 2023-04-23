@@ -46,7 +46,8 @@ gsap.utils.toArray(".fadeIn").forEach(function(elem) {
         ease: "none", 
         overwrite: "auto",
       });
-
+    },
+    "(min-width: 1240px)": function() {
       gsap.fromTo(".our-story-image", { 
         yPercent: 20,
       }, {

@@ -270,7 +270,7 @@
   #intro-top .row::after{ top: 20px; } /* Squiggle */
   #intro {min-height: 280px;}
   body { background-color: #EFD6D5; }
-  #intro {height: 400px;}
+  #intro {height: 360px;}
 }
 
 

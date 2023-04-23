@@ -620,11 +620,12 @@ form > div { padding-bottom: 32px;  }
   width: 97px;
   height: 109px;
   z-index: 100;
-/*  transform: translateX(70px);*/
-  opacity: 1;
+  transform: translateX(70px);
+  opacity: 0;
 }
 #gifts.viewing::before {
     opacity: 1;
+    transform: translateX(0);
 }
 #footer {
   padding: 0;
