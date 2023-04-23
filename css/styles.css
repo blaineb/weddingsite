@@ -9,7 +9,7 @@
 @font-face { font-family: 'Aeonik'; font-style: normal; font-weight: bold; src: local('Aeonik-Bold'), url('/../webFonts/Aeonik-Bold.otf') format('opentype'); }
 
 /*html {overflow-x: hidden; scroll-behavior: smooth; }*/
-html { max-width: 100%; }
+html { max-width: 100%; position: relative; }
 body {
   position: relative; 
   overflow-x: hidden;
