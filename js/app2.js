@@ -1,3 +1,10 @@
+////////////////////////////////////////////////////////////////////////////////
+/// Hey Aman! My bro-in-law! This isn't the cleanest code, but I spend the
+/// time I could have been cleaning this up being a good hubby-to-be for Natra
+/// LOL!
+/// Anyway, I love you my friend, see you soon!
+////////////////////////////////////////////////////////////////////////////////
+
 const introDiv = document.getElementById('getting-married');
 const gettingMarried = new CircleType(introDiv);
 const footerText = new CircleType(document.getElementById('footer-text'));
@@ -27,7 +34,7 @@ function updateIntroText() {
   const viewportWidth = window.innerWidth;
   let radius, translateX, rotate, translateY;
 
-  console.log(viewportWidth);
+  // console.log(viewportWidth);
   if (viewportWidth < 375) {
     radius = viewportWidth - 150; // Adjust the multiplier to change the radius
   }
@@ -106,12 +113,12 @@ function validateNameInput() {
 nameInput.addEventListener("change", validateNameInput);
 
 form.addEventListener("submit", function(event) {
-  console.log("Pre-prevent");
+  // console.log("Pre-prevent");
   event.preventDefault(); // prevent the form from submitting
-  console.log("Post-prevent");
+  // console.log("Post-prevent");
   // Validate name input before submitting the form
   const isNameValid = validateNameInput();
-  console.log("Validate");
+  // console.log("Validate");
   if (isNameValid) {
     const data = new FormData(form);
     const action = event.target.action;
@@ -122,7 +129,7 @@ form.addEventListener("submit", function(event) {
       body: data
     })
     .then(function() {
-      console.log("Success!")
+      // console.log("Success!")
     
     const nameValue = nameInput.value.trim();
     const nameParts = nameValue.split(" ");
@@ -179,3 +186,4 @@ anchorLinks.forEach(link => {
   });
 });
 
+console.log("Hey Aman! I love you bro-in-law :)");

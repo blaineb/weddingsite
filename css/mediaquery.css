@@ -1,11 +1,7 @@
- /* Move to bigger image */
- /* Connected to media query in HTML */
-
-/*@media only screen and (min-width: 414px) and (max-width: 959px){  
-  #getting-married { 
-    transform: translateX(-34px) rotate(-4deg) translateY(10px); 
-    transform-origin: top right;
-  }
+ /* Aman!!! */
+ /* Not the cleanest, but not the worst! And pretty creative!
+ /* I love you brudda-in-law!
+ /* See you soon!
 }*/
 @media only screen and (min-width: 767px)  { 
   #bottom-bend, #big-bend {   transform:translateY(45px);}

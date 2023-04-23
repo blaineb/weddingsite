@@ -1,3 +1,10 @@
+////////////////////////////////////////////////////////////////////////////////
+/// Hey Aman! My bro-in-law! This isn't the cleanest code, but I spend the
+/// time I could have been cleaning this up being a good hubby-to-be for Natra
+/// LOL!
+/// Anyway, I love you my friend, see you soon!
+////////////////////////////////////////////////////////////////////////////////
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.utils.toArray(".fadeIn").forEach(function(elem) {
   ScrollTrigger.matchMedia({  
@@ -117,7 +124,7 @@ function checkUrlForAnchor() {
 
 function startMeUp() {
   // code to run if no anchor tag is present
-  console.log("startMeUp function called");
+  // console.log("startMeUp function called");
   setTimeout(gsap.to(tl, { duration: 2, progress: 1}), 500);
 }
 
