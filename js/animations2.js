@@ -72,7 +72,7 @@ tl
   .from("#intro h1 #natra", { duration: 0.5, opacity: 0, y: 20, ease: Power2.easeOut }, "+=.2")
   .from("#intro h1 #amp", { duration: 0.4, opacity: 0, scale: .5, ease: Power2.easeOut })
   .from("#intro h1 #blaine", { duration: 0.4, opacity: 0, y: 20, ease: Power2.easeOut })
-  .from("#getting-married", { duration: 0.4, opacity: 0, scale: .9, ease: Power2.easeOut }, "+=.2");
+  .from("#getting-married", { duration: 0.4, opacity: 0, scale: .9, ease: Power2.easeOut });
 
 
 

@@ -555,14 +555,15 @@ form > div { padding-bottom: 32px;  }
 }
 #the-big-day.viewing::before,
 #our-story.viewing::before,
-#image-section.viewing::before,
 #hotels.viewing::before,
 #rsvp-form.viewing::before {
   transform: translateX(0);
   opacity: 1;
-  
 }
-
+#image-section.viewing::before {
+  opacity: 1;
+  transform: scale(1.1) translateY(0);
+}
 #the-big-day::before {
   background-image: url('/../assets/the-big-day-top-left.svg');
   top: 0;
@@ -579,7 +580,7 @@ form > div { padding-bottom: 32px;  }
   left: 0px;
   width: 127px;
   height: 160px;
-  transform: scale(1.1);
+  transform: scale(1) translateY(40px);
   transform-origin: bottom left;
 }
 
@@ -591,6 +592,14 @@ form > div { padding-bottom: 32px;  }
   width: 73px;
   height: 172px;
   z-index: 100;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform .4s ease-out, opacity .3s linear;
+}
+#hotels.viewing::before {
+  opacity: 1;
+  transform: translateX(0);
+
 }
 
 #rsvp-form { overflow: visible; }

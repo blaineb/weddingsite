@@ -1,158 +1,3 @@
-// gsap.registerPlugin(ScrollTrigger); /* register the ScrollTrigger plugin */
-// console.log("Hello Blaine");
-// HEADER Animate in on load
-
-
-//   var ourStoryElements = gsap.utils.toArray('#our-story .fadeIn');
-//   console.log(ourStoryElements);
-//   // ourStoryElements.forEach(function(element){
-//   var element = ourStoryElements[0];
-//     // gsap.set(element, {
-//     //   y: 40,
-//     //   opacity: 0.5,
-//     // });
-//     gsap.to(element, {
-//       x: 300,
-//       opacity: 1,
-//       duration: .3,
-//       scrollTrigger: {
-//         trigger: element,
-//         start: "top 80%",
-//         end: "top 20%",
-//         scrub: true,
-//         markers: true,
-//         onEnter: () => console.log("Entered"),
-//         debug: true,
-//         fastScrollEnd: true,
-//       }
-//     });
-//   // });
-// });
-
-
-
-// const animatables = gsap.utils.toArray(".fadeIn");
-// animatables.forEach(function(element) {
-//   gsap.set(element, {
-//     y: 60,
-//     opacity: 0,
-//     ease: 'power2.in',
-//     overwrite: 'auto',
-//   });
-//   ScrollTrigger.create({
-//     trigger: element,
-//     start: 'top 90%',
-//     end: 'top top',
-//     markers: false,
-//     onEnter: function() {
-//       gsap.to(element, {
-//         y: 0,
-//         opacity: 1,
-//         duration: 0.4, // set duration for the animation
-//       });
-//     },
-//   });
-// });
-
-// // Get all the sections on the page
-// const sections = document.querySelectorAll('section');
-
-// // Check if a section is in the viewport
-// function isInViewport(section) {
-//   const rect = section.getBoundingClientRect();
-//   return (
-//     rect.top <= (window.innerHeight || document.documentElement.clientHeight) / 2 &&
-//     rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) / 2
-//   );
-// }
-
-// // Add the "animate" class to any section that is in the viewport
-// function animateSections() {
-//   sections.forEach((section) => {
-//     if (isInViewport(section)) {
-//       section.classList.add('animate');
-//     } else {
-//       section.classList.remove('animate');
-//     }
-//   });
-// }
-
-// // Call the animateSections function whenever the window is scrolled or resized
-// window.addEventListener('scroll', animateSections);
-// window.addEventListener('resize', animateSections);
-
-// var element = document.querySelector(".fadeIn"); /* get the element */
-
-// gsap.utils.toArray('section').forEach(section => {
-//   const elems = section.querySelectorAll('.fadeIn');
-//   // Set starting params for sections
-//   gsap.set(elems, {
-//     y: 50,
-//     opacity: 0,
-//     duration: 1,
-//     ease: 'power3.out',
-//     overwrite: 'auto',
-//   });
-  
-//   ScrollTrigger.create({
-//     trigger: section,
-//     start: 'top 60%',
-//     end: 'top top',
-//     markers: true,
-//     onEnter: () => gsap.to(elems, {
-//       y: 0,
-//       opacity: 1,
-//       stagger: 0.2,
-//     }),
-//     onLeave: () => gsap.to(elems, {
-//       y: -30,
-//       opacity: 0,
-//       stagger: 0.2,
-//     }),
-//     onEnterBack: () => gsap.to(elems, {
-//       y: 0,
-//       opacity: 1,
-//       stagger: -0.2,
-//     }),
-//     onLeaveBack: () => gsap.to(elems, {
-//       y: 30,
-//       opacity: 0,
-//       stagger: -0.2,
-//     }),
-//   });
-// })
-
-// gsap.utils.toArray(".fadeIn").forEach(function(element) { /* loop through all elements with class "fadeIn" */
-//   gsap.to(element, {
-//     opacity: 1,
-//     y: -30,
-//     duration: .3,
-//     scrollTrigger: {
-//       trigger: element,
-//       start: "top 80%", /* start the animation when the center of the element reaches the center of the viewport */
-//       end: "bottom 30%", /* reverse the animation when the bottom of the element leaves the top of the viewport */
-//       scrub: true, /* smooth out the animation */
-//       onEnter: function() {
-//         element.style.opacity = 1; /* set opacity to 1 onEnter */
-//       },
-//       onLeave: function() {
-//         element.style.opacity = 0; /* set opacity to 0 onLeave */
-//         element.style.top = "30px"; /* move up 30px onLeave */
-//       },
-//       // onEnterBack: function() {
-//       //   element.style.opacity = 1; /* set opacity to 1 onEnterBack */
-//       //   element.style.top = "0"; /* move down to its original position onEnterBack */
-//       // },
-//       // onLeaveBack: function() {
-//       //   element.style.opacity = 0; /* set opacity to 0 onLeaveBack */
-//       //   element.style.top = "30px"; /* move up 30px onLeaveBack */
-//       // }
-//     }
-//   });
-// });
-
-
-
 const introDiv = document.getElementById('getting-married');
 const gettingMarried = new CircleType(introDiv);
 const footerText = new CircleType(document.getElementById('footer-text'));
@@ -201,7 +46,6 @@ function updateIntroText() {
   // }
   
   gettingMarried.radius(radius).dir(-1);
-  document.getElementById('radius').textContent = radius;
 
 }
 
@@ -320,5 +164,18 @@ form.addEventListener("submit", function(event) {
     // window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
   });
   }
+});
+
+const anchorLinks = document.querySelectorAll('.anchor-tag');
+
+anchorLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault(); // prevent the default action of the link
+    const targetId = link.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView();
+    }
+  });
 });
 
