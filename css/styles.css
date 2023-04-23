@@ -8,7 +8,8 @@
 @font-face { font-family: 'Aeonik'; font-style: normal; font-weight: normal; src: local('Aeonik-Regular'), url('/../webFonts/Aeonik-Regular.ttf') format('truetype'); }
 @font-face { font-family: 'Aeonik'; font-style: normal; font-weight: bold; src: local('Aeonik-Bold'), url('/../webFonts/Aeonik-Bold.otf') format('opentype'); }
 
-html {overflow-x: hidden; scroll-behavior: smooth; }
+/*html {overflow-x: hidden; scroll-behavior: smooth; }*/
+html { max-width: 100%; }
 body {
   position: relative; 
   overflow-x: hidden;
@@ -19,6 +20,8 @@ body {
   line-height: 1.2;
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  max-width: 100%;
 }
 section {
   display: flex;
@@ -540,6 +543,7 @@ form > div { padding-bottom: 32px;  }
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: transform .4s ease-out, opacity .3s linear;
 }
 
 #our-story::before {
@@ -549,6 +553,15 @@ form > div { padding-bottom: 32px;  }
   height: 98px;
   background-image: url('/../assets/our-story-top-left.svg');
 }
+#the-big-day.viewing::before,
+#our-story.viewing::before,
+#image-section.viewing::before,
+#hotels.viewing::before,
+#rsvp-form.viewing::before {
+  transform: translateX(0);
+  opacity: 1;
+  
+}
 
 #the-big-day::before {
   background-image: url('/../assets/the-big-day-top-left.svg');
@@ -556,6 +569,8 @@ form > div { padding-bottom: 32px;  }
   left: 0;
   width: 134px;
   height: 157px;
+  opacity: 0;
+  transform: translateX(-72px);
 }
 
 #image-section::before {
@@ -586,6 +601,8 @@ form > div { padding-bottom: 32px;  }
   width: 82px;
   height: 217px;
   z-index: 100;
+  transform: translateX(-82px);
+  opacity: 0;
 }
 
 #gifts::before {
@@ -595,6 +612,8 @@ form > div { padding-bottom: 32px;  }
   width: 97px;
   height: 109px;
   z-index: 100;
+  transform: translateX(70px);
+  opacity: 0;
 }
 
 #footer {
@@ -683,6 +702,8 @@ body .cursor__ball circle {
   fill: #fff;
 }
 #getting-married {   transform: translateY(68px) translateX(-10px); }
-/*.fadeIn {
-  opacity: 0;
-}*/
+.fadeIn {
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0s;
+}

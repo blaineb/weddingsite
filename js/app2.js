@@ -1,9 +1,38 @@
+// gsap.registerPlugin(ScrollTrigger); /* register the ScrollTrigger plugin */
+// console.log("Hello Blaine");
+// HEADER Animate in on load
 const header = document.getElementById('nav');
 window.addEventListener('load', function() {
   header.classList.remove('preload');
+
+//   var ourStoryElements = gsap.utils.toArray('#our-story .fadeIn');
+//   console.log(ourStoryElements);
+//   // ourStoryElements.forEach(function(element){
+//   var element = ourStoryElements[0];
+//     // gsap.set(element, {
+//     //   y: 40,
+//     //   opacity: 0.5,
+//     // });
+//     gsap.to(element, {
+//       x: 300,
+//       opacity: 1,
+//       duration: .3,
+//       scrollTrigger: {
+//         trigger: element,
+//         start: "top 80%",
+//         end: "top 20%",
+//         scrub: true,
+//         markers: true,
+//         onEnter: () => console.log("Entered"),
+//         debug: true,
+//         fastScrollEnd: true,
+//       }
+//     });
+//   // });
 });
 
-// gsap.registerPlugin(ScrollTrigger); /* register the ScrollTrigger plugin */
+
+
 // const animatables = gsap.utils.toArray(".fadeIn");
 // animatables.forEach(function(element) {
 //   gsap.set(element, {
@@ -294,30 +323,3 @@ form.addEventListener("submit", function(event) {
   }
 });
 
-
-
-// Check if a section is in the viewport
-function isInViewport(section) {
-  console.log("HI!");
-  const rect = section.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-  );
-}
-
-// Add the "animate" class to any section that is in the viewport
-function animateSections() {
-  console.log("Hah!");
-  sections.forEach((section) => {
-    if (isInViewport(section)) {
-      section.classList.add('animate');
-    } else {
-      section.classList.remove('animate');
-    }
-  });
-}
-
-// Call the animateSections function whenever the window is scrolled or resized
-window.addEventListener('scroll', animateSections);
-window.addEventListener('resize', animateSections);
