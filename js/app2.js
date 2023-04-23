@@ -1,9 +1,7 @@
 // gsap.registerPlugin(ScrollTrigger); /* register the ScrollTrigger plugin */
 // console.log("Hello Blaine");
 // HEADER Animate in on load
-const header = document.getElementById('nav');
-window.addEventListener('load', function() {
-  header.classList.remove('preload');
+
 
 //   var ourStoryElements = gsap.utils.toArray('#our-story .fadeIn');
 //   console.log(ourStoryElements);
@@ -29,7 +27,7 @@ window.addEventListener('load', function() {
 //       }
 //     });
 //   // });
-});
+// });
 
 
 
@@ -274,7 +272,7 @@ form.addEventListener("submit", function(event) {
     const data = new FormData(form);
     const action = event.target.action;
     event.preventDefault();
-    submitButton.textContent = "Submitting..."
+    submitButton.textContent = "Submitting"
     fetch(action, {
        method: 'POST',
       body: data
@@ -291,7 +289,8 @@ form.addEventListener("submit", function(event) {
     if (responseValue === "accepts") {
       confetti({
         particleCount: 250,
-        spread: 180
+        spread: 180,
+        colors: ["#F1E171","#DC6E2B","#414812","#F4D9D8","#E2C2D8", "#7D7932"],
       });
 
       messageContainer.textContent = `Yay!! We can't wait to celebrate with you, ${nameParts[0]}!`;

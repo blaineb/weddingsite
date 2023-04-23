@@ -1,11 +1,33 @@
-header {
-	transition: all .3s ease-in-out;
-}
-header.preload {
-	transform: translateY(-100%);
+header { transition: all .3s ease-in-out; }
+.preload header { transform: translateY(-100%); }
+/*header.fast {transition-delay: 0!important;}*/
+/*
+.preload #intro-top::before { transform: translateX(-100%); opacity: 0;}
+.preload #intro-top::after { transform: translateY(100%);  opacity: 0;}
+.preload #intro::after 		{ transform: translateX(100%);	opacity: 0;}
+.preload #intro-top .row::after { opacity: 0; }
+.preload #bottom-bend { right: 0; }
+#intro-top .row::after {transition: opacity .3s linear;}
+#intro-top::before,
+#intro::after {transition: transform .35s cubic-bezier(0.26,0.86,0.44,0.985), opacity .35s linear;}
+#intro-top::after {transition: transform .15s cubic-bezier(0.26,0.86,0.44,0.985), opacity .15s linear;}
+#bottom-bend { transition: transform .35s cubic-bezier(0.26,0.86,0.44,0.985), opacity .35s linear, right .35s cubic-bezier(0.26,0.86,0.44,0.985); }
+#intro-top::before { transform: translateX(0); opacity: 1; }
+#intro::after { transform: translateX(0); transition-delay: .1s; }
+#intro-top::after {transform: translateY(0); opacity: 1}
+
+
+
+#intro::after, #bottom-bend { transition-delay: .3s; }
+#intro-top::after { transition-delay: .6s; }
+header { transition-delay: 1s; }
+*/
+ #the-big-day.animate::before {
+	transform: rotate(8deg);
+	transition: transform .8 ease-in-out;
 }
 
-#the-big-day.animate::before {
-	transform: rotate(8deg);
-	transition: transform .3 ease-in-out;
-}
+
+#intro-top::before {}
+
+

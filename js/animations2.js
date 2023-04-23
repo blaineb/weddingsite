@@ -46,24 +46,36 @@ gsap.utils.toArray(".fadeIn").forEach(function(elem) {
         ease: "none", 
         overwrite: "auto",
       });
+
+      gsap.fromTo(".our-story-image", { 
+        yPercent: 20,
+      }, {
+        yPercent: -20,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: "#our-story",
+          start: "top bottom", //top of element, bottom of viewport
+          end: "bottom top",  //bottom of element, top of viewport
+          scrub: true,
+          // markers: true,
+        }
+      });
     }
   });
 });
 
 
-gsap.fromTo(".our-story-image", { 
-  yPercent: 20,
-}, {
-  yPercent: -20,
-  ease: 'none',
-  scrollTrigger: {
-    trigger: "#our-story",
-    start: "top bottom", //top of element, bottom of viewport
-    end: "bottom top",  //bottom of element, top of viewport
-    scrub: true,
-    // markers: true,
-  }
-})
+const tl = gsap.timeline().pause();
+
+tl
+  .from("#intro-top .eyebrow", { duration: 0.5, opacity: 0, y: 20, ease: Power2.easeOut }, 1)
+  .from("#intro h1 #natra", { duration: 0.5, opacity: 0, y: 20, ease: Power2.easeOut }, "+=.2")
+  .from("#intro h1 #amp", { duration: 0.4, opacity: 0, scale: .5, ease: Power2.easeOut })
+  .from("#intro h1 #blaine", { duration: 0.4, opacity: 0, y: 20, ease: Power2.easeOut })
+  .from("#getting-married", { duration: 0.4, opacity: 0, scale: .9, ease: Power2.easeOut }, "+=.2");
+
+
+
 
 var sections = ["#the-big-day","#hotels","#rsvp-form","#gifts"]
 
@@ -84,3 +96,23 @@ ScrollTrigger.create({
     start: "top 40%",
     fastScrollEnd: true,
   });
+
+
+
+
+function checkUrlForAnchor() {
+  
+  startMeUp();
+  const body = document.getElementById('wrapper');
+  body.classList.remove("preload");
+}
+
+
+function startMeUp() {
+  // code to run if no anchor tag is present
+  console.log("startMeUp function called");
+  setTimeout(gsap.to(tl, { duration: 2, progress: 1}), 500);
+}
+
+// call checkUrlForAnchor on page load
+window.addEventListener("load", checkUrlForAnchor);
