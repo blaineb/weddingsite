@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-/// Hey Aman! My bro-in-law! This isn't the cleanest code, but I spend the
+/// Hey Aman! My bro-in-law! This isn't the cleanest code, but I spent the
 /// time I could have been cleaning this up being a good hubby-to-be for Natra
 /// LOL!
 /// Anyway, I love you my friend, see you soon!
