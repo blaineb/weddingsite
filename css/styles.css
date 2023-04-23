@@ -199,8 +199,7 @@ nav a {
 #intro-top .eyebrow, #intro .eyebrow { color: #9C958F; display: block; }
 #intro .eyebrow { letter-spacing: .5em; }
 #intro {
-  height: 640px;
-  max-height: 640px;
+  height: 520px;
   overflow:visible!important;
   align-items: center;
   justify-content: center;
