@@ -83,7 +83,10 @@ sections.forEach(function(section){
   ScrollTrigger.create({
     trigger: section,
     // markers: true,
-    toggleClass: "viewing",
+    onEnter: function(trigger) { 
+      const triggerSection = trigger.trigger;
+      triggerSection.classList.add("viewing"); },
+    // toggleClass: "viewing",
     start: "top 70%",
     fastScrollEnd: true,
   });
@@ -92,7 +95,10 @@ sections.forEach(function(section){
 ScrollTrigger.create({
     trigger: "#image-section",
     // markers: true,
-    toggleClass: "viewing",
+    onEnter: function(trigger) { 
+      const triggerSection = trigger.trigger;
+      triggerSection.classList.add("viewing"); },
+    // toggleClass: "viewing",
     start: "top 40%",
     fastScrollEnd: true,
   });

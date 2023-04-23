@@ -199,7 +199,7 @@ nav a {
 #intro-top .eyebrow, #intro .eyebrow { color: #9C958F; display: block; }
 #intro .eyebrow { letter-spacing: .5em; }
 #intro {
-  height: 62vh;
+  height: 640px;
   max-height: 640px;
   overflow:visible!important;
   align-items: center;
@@ -625,7 +625,7 @@ form > div { padding-bottom: 32px;  }
   opacity: 1;
 }
 #gifts.viewing::before {
-  opacity: 1;
+    opacity: 1;
 }
 #footer {
   padding: 0;

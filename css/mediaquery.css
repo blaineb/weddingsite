@@ -228,7 +228,7 @@
 }
 
 @media only screen and (min-width: 960px) {
-  #intro { height: 70vh; min-height: 560px; max-height: 640px;}
+  #intro { height: 640px;}
   header { height: 80px; }
   nav a { font-size: 28px; }
   #gifts .row {align-items: flex-start; text-align: left;}
@@ -255,12 +255,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-  #intro {max-height: 580px;}
+  #intro {height: 580px;}
   }
 
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   header { height: 40px; }
-  section {padding: 40px 0;}
+  section {padding: 60px 0;}
   #blaine { display: inline; }
   #intro-top {
     padding-top: 56px;
@@ -270,6 +270,7 @@
   #intro-top .row::after{ top: 20px; } /* Squiggle */
   #intro {min-height: 280px;}
   body { background-color: #EFD6D5; }
+  #intro {height: 420px;}
 }
 
 
