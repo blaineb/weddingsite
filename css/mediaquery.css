@@ -1,8 +1,10 @@
  /* Aman!!! */
  /* Not the cleanest, but not the worst! And pretty creative!
+ /* I went deep on media queries!
  /* I love you brudda-in-law!
  /* See you soon!
 }*/
+
 @media only screen and (min-width: 767px)  { 
   #bottom-bend, #big-bend {   transform:translateY(45px);}
   #bottom-bend img, #big-bend svg {height: 570px;}
@@ -227,7 +229,7 @@
   #intro { height: 580px;}
   header { height: 80px; }
   nav a { font-size: 28px; }
-  #gifts .row {align-items: flex-start; text-align: left;}
+  #gifts .row {align-items: center; text-align: center;}
 
 
 }
