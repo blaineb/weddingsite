@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.sorting {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#attendee-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  width: 150px;
+  height: 100px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  scroll-snap-align: start;
+}
+
+.table-header {
+  font-weight: bold;
+}
+
+.sorting {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sorting label {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sorting label:hover {
+  background-color: #f0f0f0;
+}
+
+.sorting label input[type="radio"] {
+  display: none;
+}
+
+.sorting label input[type="radio"]:checked + span {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#attendee-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+
+.card {
+  width: 150px;
+  height: 100px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.table-header {
+  font-weight: bold;
+}
