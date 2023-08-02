@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown to August 5, 5:15</title>
+</head>
+<body>
+  <div id="countdown"></div>
+
+  <script>
+    function updateCountdown() {
+      // Set the target date to August 5, 5:15 AM (local time)
+      const targetDate = new Date('2023-08-05T05:15:00');
+
+      // Get the current date and time
+      const currentDate = new Date();
+
+      // Calculate the difference between the target date and the current date
+      const timeDifference = targetDate - currentDate;
+
+      // Check if the target date has already passed
+      if (timeDifference <= 0) {
+        document.getElementById('countdown').innerText = "Countdown is over!";
+        return;
+      }
+
+      // Calculate the remaining days, hours, minutes, and seconds
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      // Display the countdown
+      const countdownElement = document.getElementById('countdown');
+      countdownElement.innerText = `Countdown: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+    }
+
+    // Update the countdown every second
+    setInterval(updateCountdown, 1000);
+
+    // Call the update function once immediately to avoid a delay in displaying the countdown
+    updateCountdown();
+  </script>
+</body>
+</html>

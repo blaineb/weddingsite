@@ -266,7 +266,7 @@ nav a {
  }
 
 #image-section,
-#rsvp-form { border-top: 2px solid #DC6E2B; } /* red    */
+#rsvp-form, #attendees { border-top: 2px solid #DC6E2B; } /* red    */
 
 #the-big-day, 
 #gifts,
@@ -736,11 +736,13 @@ body .cursor__ball circle {
     margin-right: 24px;
     font-size: 18px;
   }*/
+  #attendees { padding-left: 48px; padding-right: 48px; }
+  #attendee-list-container {background: rgba(244, 217, 216,.5); border-radius: 20px; max-width: 1040px!important;}
   .phase h3 { color: #010101;font-size: 28px; padding-bottom: 12px; }
 
   #ceremony-phase th {width: 120px;}
 }
-.phase-label, .phase-details { background: #F4D9D8;}
+.phase-label, .phase-details { background: rgba(244, 217, 216,.5);}
 
 
 /*.phase-details {display: none;}*/
@@ -750,13 +752,14 @@ body .cursor__ball circle {
 .phase tr:last-child {padding-bottom: 0;}
 .phase > .phase-time {display: none;}
 .phase-time { color: #010101; opacity: .7; margin-top: 20px; }
-.phase-label { width: 100%; display: flex; flex-direction: row-reverse; align-items: center; border-bottom: 1px solid green; padding: 12px 24px; border-top-left-radius: 20px; border-top-right-radius: 20px;}
+.phase-label { width: 100%; display: flex; flex-direction: row-reverse; align-items: center; border-bottom: 1px solid rgba(0,0,0,.12); padding: 12px 24px; border-top-left-radius: 20px; border-top-right-radius: 20px;}
 .phase h3 {color: #010101; display: block; flex-grow: 1; padding: 0;}
 .phase-details { padding: 24px; margin-bottom: 48px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;}
+.phase:last-child .phase-details { margin-bottom: 0; }
 .phase-details *, .phase-details span { color: #010101; font-size: 18px; line-height: 20px;}
 .phase-time { padding-bottom: 16px; padding-left: 16px; }
 .phase-details th { font-size: 14px; padding-top: 4px; opacity: .5}
-.phase-label {position: sticky; }
+.phase-label { position: sticky; }
 .phase .disclaimer { opacity: .5; font-size: 14px; line-height: 16px; }
 
 
@@ -777,6 +780,39 @@ body .cursor__ball circle {
   position: relative;
   top: -2px;
 }
+
+
+#attendee-list-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 24px 24px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.attendee-column {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 200px; /* Adjust the width as needed */
+  margin-right: 100px; /* Adjust the spacing between columns as needed */
+  padding: 10px;
+/*  border: 1px solid #ccc;*/
+}
+
+.table-header {
+  font-weight: bold;
+}
+
+.person-row {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: flex;
+  color: #010101;
+  justify-content: space-between;
+}
+.table-number { margin-left: 24px; color: #7D7932; }
+
+
 /*.phase-label .phase-time {display: none;}*/
 /*.phase-time {
   background: rgba(0,0,0,.05);

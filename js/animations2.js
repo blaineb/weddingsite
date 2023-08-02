@@ -53,22 +53,23 @@ gsap.utils.toArray(".fadeIn").forEach(function(elem) {
         ease: "none", 
         overwrite: "auto",
       });
-    },
-    "(min-width: 1240px)": function() {
-      gsap.fromTo(".our-story-image", { 
-        yPercent: 20,
-      }, {
-        yPercent: -20,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: "#our-story",
-          start: "top bottom", //top of element, bottom of viewport
-          end: "bottom top",  //bottom of element, top of viewport
-          scrub: true,
-          // markers: true,
-        }
-      });
     }
+    // Taken out for day of.,
+    // "(min-width: 1240px)": function() {
+    //   gsap.fromTo(".our-story-image", { 
+    //     yPercent: 20,
+    //   }, {
+    //     yPercent: -20,
+    //     ease: 'none',
+    //     scrollTrigger: {
+    //       trigger: "#our-story",
+    //       start: "top bottom", //top of element, bottom of viewport
+    //       end: "bottom top",  //bottom of element, top of viewport
+    //       scrub: true,
+    //       // markers: true,
+    //     }
+    //   });
+    // }
   });
 });
 
@@ -85,7 +86,8 @@ tl
 
 
 
-var sections = ["#the-big-day","#hotels","#rsvp-form","#gifts"]
+// var sections = ["#the-big-day","#hotels","#rsvp-form","#gifts"]
+var sections = ["#programme","#attendees","#gifts"]
 
 sections.forEach(function(section){
   ScrollTrigger.create({
